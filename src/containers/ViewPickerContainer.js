@@ -3,7 +3,7 @@ import ViewPickerComponent from '../components/ViewPickerComponent';
 import {setActiveView} from '../actions';
 
 const mapStateToProps = state => ({
-  activeView: state.activeView
+  activeView: state.ActiveView
 });
 
 const mapDispatchToProps = dispatch => ({

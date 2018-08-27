@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 
 import HeaderCardComponent from './HeaderCardComponent';
 import ViewPickerContainer from '../containers/ViewPickerContainer';
+import PostStatusFormContainer from '../containers/PostStatusFormContainer';
+import PostsContainer from '../containers/PostsContainer';
 
 const RootComponent = ({activeView, myName}) => (
   <div className="container">
@@ -14,6 +16,17 @@ const RootComponent = ({activeView, myName}) => (
 
     <br/>
 
+    {activeView === "MY_STATUSES" && (
+      <div>
+        <PostStatusFormContainer/>
+        <PostsContainer/>
+      </div>
+    )}
+    {activeView === "MY_REPOS" && (
+      <div>
+        Coming Soon!
+      </div>
+    )}
   </div>
 );
 
