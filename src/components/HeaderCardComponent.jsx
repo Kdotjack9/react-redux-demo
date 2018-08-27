@@ -5,7 +5,7 @@ const HeaderCardComponent = ({name}) => (
   <div className="panel panel-default">
     <div className="panel-body">
       <span className="h2">
-        <spann className="fa fa-user text-primary" aria-hidden="true"/>&nbsp;&nbsp;
+        <span className="fa fa-user text-primary" aria-hidden="true"/>&nbsp;&nbsp;
           {name}
       </span>
     </div>
