@@ -10,14 +10,18 @@ import {Provider} from 'react-redux';
 import {composeWithDevTools} from 'redux-devtools-extension';
 import thunk from 'redux-thunk';
 
-// conststore = createStore(reducers, composeWithDevTools(
-//   applyMiddleware(thunk)
-// ));
+import RootContainer from './containers/RootContainer';
+
+import reducers from './reducers';
+
+const store = createStore(reducers, composeWithDevTools(
+  applyMiddleware(thunk)
+));
 
 const app = (
-  <div>
-    Hello World!
-  </div>
+  <Provider store={store}>
+    <RootContainer/>
+  </Provider>
 );
 
 ReactDOM.render(app, document.getElementById("app"));
